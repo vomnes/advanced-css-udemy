@@ -32,14 +32,6 @@ body {
   box-sizing: border-box; /* === Best Practice === */
 }
 
-.text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Shift 50% of the element width ... */
-  text-align: center;
-}
-
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, #7ed56f88, #28b48588), url(../img/hero.jpg);
@@ -50,13 +42,21 @@ body {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* x y corner */
 }
 
-.logo-box {
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Shift 50% of the element width ... */
+  text-align: center;
+}
+
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
 
-.logo {
+.header__logo {
   height: 3.5rem;
 }
 
@@ -68,7 +68,7 @@ body {
   margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block; /* Under each other */
   font-size: 6rem;
   font-weight: 400;
@@ -84,7 +84,7 @@ body {
   */
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block; /* Under each other */
   font-size: 2rem;
   font-weight: 700;
@@ -147,7 +147,7 @@ body {
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
 }
@@ -165,7 +165,7 @@ body {
   transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
   background-color: #fff;
 }
 
@@ -174,7 +174,7 @@ body {
   opacity: 0; /* Do the special effect */
 }
 
-.btn-animated {
+.btn--animated {
   animation: moveInBottom .5s ease-out .75s; /* Last: animation delay */
   animation-fill-mode: backwards; /* Button only visible when the animation start */
 }
