@@ -35,6 +35,15 @@
     }
   }
 
+  &--green {
+    background-color: $color-primary-light;
+    color: #FFF;
+
+    &::after {
+      background-color: $color-primary-light;
+    }
+  }
+
   &::after {
     content: ''; /* Compulsory for ::after even if empty */
     display: inline-block;

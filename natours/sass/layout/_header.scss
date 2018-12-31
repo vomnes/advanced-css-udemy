@@ -9,6 +9,7 @@
   background-position: top; /* Fix image at the top */
   position: relative; /*  Set a reference for the child components */
 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* x y corner */
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* x y corner */
 
   &__text-box {
