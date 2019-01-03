@@ -12,6 +12,11 @@
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* x y corner */
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* x y corner */
 
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* x y corner */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* x y corner */
+  }
+
   &__text-box {
     position: absolute;
     top: 40%;
