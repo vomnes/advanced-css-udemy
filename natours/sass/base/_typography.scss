@@ -24,6 +24,11 @@
     animation-iteration-count: 3;
     animation-delay: 1s;
     */
+
+    @include respond(phone) {
+      font-size: 4rem;
+      letter-spacing: 2rem;
+    }
   }
 
   &--sub {
