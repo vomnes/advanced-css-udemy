@@ -35,11 +35,11 @@ $minMaxSwitch: 112.5em;
   $size: map-get($breakpoint-list, $breakpoint);
 
   @if $size >= $minMaxSwitch {
-    @media (min-width: $size) {
+    @media only screen and (min-width: $size) {
       @content;
     }
   } @else {
-    @media (max-width: $size) {
+    @media only screen and (max-width: $size) {
       @content;
     }
   }
