@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="item item--1">Modern CSS 1</div>
+  <div class="item item--2">Modern CSS 2</div>
+  <div class="item item--3">Modern CSS 3</div>
+  <div class="item item--4">Modern CSS 4</div>
+  <div class="item item--5">Modern CSS 5</div>
+  <div class="item item--6">Modern CSS 6</div>
+  <div class="item item--7">Modern CSS 7</div>
+  <div class="item item--8">Modern CSS 8</div>
+</div>
+
+<style>
+  .container {
+    width: 1000px;
+    margin: 30px auto;
+    background-color: #EEE;
+
+    display: grid;
+    grid-gap: 30px;
+
+    grid-auto-rows: 80px;
+
+    grid-auto-flow: row dense; // Default: row // dense: no hole each space is fill by an item
+    grid-auto-columns: .5fr;
+
+    // Align grid items to grid areas
+    //align-items: center; // Default: stretch / center / end / start
+    //justify-items: center;
+
+    // Align grid tracks to grid container
+    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(2, 200px);
+    height: 1000px;
+
+    justify-content: center; // center / start / end / space-between / space-around
+    align-content: center;
+
+    /* width: 90%;
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    grid-template-columns: repeat(auto-fill, 100px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: 150px; */
+
+    & .item {
+      padding: 10px;
+      color: #FFF;
+      background-color: royalblue;
+
+      &--4 {
+        background-color: crimson;
+        grid-row: 2 / span 3;
+
+        //align-self: start;
+        //justify-self: start;
+      }
+
+      &--6 {
+        background-color: lightcoral;
+        grid-row: 2 / span 2;
+      }
+
+      &--7 {
+        background-color: palevioletred;
+        grid-column: 1 / -1;
+      }
+    }
+  }
+</style>
